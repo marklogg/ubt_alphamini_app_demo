@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RobotsdkTest</string>
+  <string name="uninstall_apk">uninstall apk</string>
+  <string name="install_apk">Install Apk</string>
+  <string name="replace_bootstrap_media">replace bootstrap media</string>
+  <string name="remove_bootstrap_media">remove bootstrap media</string>
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+  <Button
+      android:textAllCaps="false"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:onClick="turnOn"
+      android:text="turn On"
+      />
+
+  <Button
+      android:textAllCaps="false"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:onClick="turnOff"
+      android:text="turn Off"
+      />
+
+  <Button
+      android:textAllCaps="false"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:onClick="startNormalModel"
+      android:text="turn On (ColorDuration)"
+      />
+
+  <Button
+      android:textAllCaps="false"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:onClick="startBreathModelOnce"
+      android:text="turn On (Breath Once)"
+      />
+
+  <Button
+      android:textAllCaps="false"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:onClick="startBreathModel"
+      android:text="turn On (Breath)"
+      />
+
+</LinearLayout>

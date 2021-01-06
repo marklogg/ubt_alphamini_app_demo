@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+  <Button
+      android:textAllCaps="false"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:onClick="getRobotGesture"
+      android:text="get Robot Gesture"
+      />
+  <Button
+      android:textAllCaps="false"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:onClick="getRobotGestureSync"
+      android:text="get Robot Gesture Sync"
+      />
+  <Button
+      android:textAllCaps="false"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:onClick="standup"
+      android:text="standup"
+      />
+  <Button
+      android:textAllCaps="false"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:onClick="sitdown"
+      android:text="sitdown"
+      />
+  <Button
+      android:textAllCaps="false"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:onClick="squatdown"
+      android:text="squatdown"
+      />
+  <Button
+      android:textAllCaps="false"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:onClick="getRobotFallStatus"
+      android:text="get Robot FallStatus"
+      />
+</LinearLayout>

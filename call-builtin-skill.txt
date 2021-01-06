@@ -1,0 +1,143 @@
+在第三方语音服务内调用优必选内置技能:
+// 执行高难度动作意图:
+//exercise  -- 俯卧撑
+//yoga      -- 瑜伽
+//kungfu    -- 功夫
+//sit_down  -- 坐下
+//foot_stand  --金鸡独立
+//fly       --大棚展翅
+//stand_up  --站立
+
+// 执行普通动作意图:
+// raisinghands -- 举手投降
+// raisingrightleg -- 抬右腿
+// raisingleftleg -- 抬左腿
+// stoop --弯腰
+// Keep_turning_right --右转
+// Keep_turning_left  --左转
+// Keep_moving_forward --前进
+// Keep_going_backwards --后退
+// crouch --蹲下
+// bow_step --弓步
+// say_hi -- 打招呼
+// sneeze -- 打喷嚏
+// burp -- 打嗝
+// break_wind -- 放屁
+// scratch -- 挠痒痒
+// hand_kiss -- 飞吻
+// hug -- 拥抱
+// Stretch -- 伸懒腰
+// doze -- 打瞌睡
+// frighten -- 吓你一跳
+// shake_hand --握手
+// nod -- 点头
+// shake_head -- 摇头
+// turn_head -- 歪头
+// be_cute -- 卖萌
+// dancing -- 跳舞
+
+
+// 帮助类意图
+// what_can    --我能做什么
+// how_bind    --怎么绑定
+// how_connect --怎么联网
+// how_volume  --怎么调音量
+// how_stop    --怎么停止
+// how_shutoff --怎么关机
+// how_rest    --怎么休眠
+// how_lte     --怎么开启4G
+// how_photo   --怎么拍照
+// how_phone   --怎么打电话
+// wifi_switch --怎么切网
+// FOURG_statu  --查询4G状态开关
+// charge_statu --查询充电状态
+//which_wifi    --联哪个网
+// how_battery  --多少电量
+// how_content  --多少容量
+// wifi_shuton  --打开wifi
+// wifi_shutoff --关闭wifi
+// FOURG_shuton --打开4g
+// FOURG_shutoff  --关闭4G
+
+
+// 开关机
+// turn_off_robot --关机
+
+ public static void startSkillByUtterance(Context mContext, String utterance,
+      JsonObjectString parameter, ResponseCallback callback) {
+    String packageName = mContext.getPackageName();
+    MasterInteractor masterInteractor = Master.get().getOrCreateInteractor("robot:" + packageName);
+    SkillsProxy aSkillsProxy = masterInteractor.createSkillsProxy();
+    SkillIntent skillIntent = new SkillIntent(SkillIntent.CATEGORY_SPEECH);
+    skillIntent.setSpeechUtterance(utterance);
+    Param param = null;
+    if (parameter != null) {
+      param = ParcelableParam.create(parameter);
+    }
+    aSkillsProxy.call(skillIntent, param, callback);
+}
+startSkillByUtterance(Context, "sit_down", null)
+
+
+## 开发自己的技能
+参考Mini-Sdk-demo:
+public class LowpowerInterruptibleSkill extends ProxySkill {
+
+    private static final String TAG = "LPInterruptibleSkill";
+
+    @Override
+    protected void onSkillStart() {
+        super.onSkillStart();
+        Log.d(TAG, "低电运行可打断技能启动 ");
+    }
+
+    @Override
+    protected void onSkillStop(SkillStopCause skillStopCause) {
+        super.onSkillStop(skillStopCause);
+        Log.d(TAG, "低电运行可打断技能停止："+skillStopCause);
+    }
+
+    @Call(path = "/demo_lpinterruptible/startSkill")
+    public void onStartSkill(Request request, final Responder responder){
+        Log.d(TAG,"onStartSkill---");
+        responder.respondSuccess();
+    }
+
+    @Override
+    protected String getSkillName() {
+        return "demo_lpinterruptible_skill";
+    }
+
+    @Override
+    protected SkillType getSkillType() {
+        return SkillType.LowpowerRun;
+    }
+
+    @Override
+    protected SkillType getSubSkillType() {
+        return SkillType.Interruptible;
+    }
+
+    @Override
+    protected boolean onHeadTapEvent(KeyEvent keyEvent) {
+        stopSkill();
+        return true;
+    }
+
+    @Override
+    protected void onWakeUpEvent(Speech.WakeupParam wakeupParam) {
+
+    }
+
+    @Override
+    protected boolean isNeedWakeUpEvent() {
+        return false;
+    }
+
+    @Override
+    protected boolean isNeedHeadTapEvent() {
+        return true;
+    }
+}
+
+SkillHelper.startSkillByPath("/demo_lpinterruptible/startSkill", null);

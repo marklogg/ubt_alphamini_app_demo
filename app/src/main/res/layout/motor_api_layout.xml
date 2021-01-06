@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="20pt"
+      android:orientation="horizontal"
+      >
+
+    <Button
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="getMotorList"
+        android:text="getMotorList"
+        />
+
+    <Button
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="getMotor"
+        android:text="getSingleMotor"
+        />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="20pt"
+      android:orientation="horizontal"
+      >
+
+    <Button
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="getMotorState"
+        android:text="getMotorState"
+        />
+
+    <Button
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="getMotorStateByArray"
+        android:text="getMotorStateByArray"
+        />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="20pt"
+      android:orientation="horizontal"
+      >
+
+    <Button
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="readAngle"
+        android:text="readAngle"
+        />
+
+    <Button
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="readAngleByArray"
+        android:text="readAngleByArray"
+        />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="20pt"
+      android:orientation="horizontal"
+      >
+
+    <Button
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="lockMotor"
+        android:text="lockSingleMotor"
+        />
+
+    <Button
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="unlockMotor"
+        android:text="unlockMotors"
+        />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="20pt"
+      android:orientation="horizontal"
+      >
+
+    <Button
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="lockMotorByList"
+        android:text="lockMotorByList"
+        />
+
+    <Button
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="unlockMotorByList"
+        android:text="unlockMotorByList"
+        />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="20pt"
+      android:orientation="horizontal"
+      >
+
+    <Button
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="moveToAngle"
+        android:text="moveToAngle"
+        />
+
+    <Button
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="moveToAngleByList"
+        android:text="moveToAngleByList"
+        />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="20pt"
+      android:orientation="horizontal"
+      >
+
+    <Button
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="subscribeMotorStatusEvent"
+        android:text="subscribeMotorStatusEvent"
+        />
+
+  </LinearLayout>
+
+  <Button
+      android:textAllCaps="false"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:onClick="unsubscribeMotorStatusEvent"
+      android:text="unsubscribeMotorStatusEvent"
+      />
+
+</LinearLayout>

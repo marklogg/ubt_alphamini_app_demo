@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    >
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        >
+
+      <Button
+          android:layout_width="0dp"
+          android:layout_height="50dp"
+          android:layout_weight="1"
+          android:onClick="actionApiTest"
+          android:text="action Api Test"
+          android:textAllCaps="false"
+          android:textSize="12sp"
+          />
+
+      <Button
+          android:layout_width="0dp"
+          android:layout_height="50dp"
+          android:layout_weight="1"
+          android:onClick="expressApiTest"
+          android:singleLine="true"
+          android:text="express Api Test"
+          android:textAllCaps="false"
+          android:textSize="12sp"
+          />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        >
+
+
+
+      <Button
+          android:layout_width="0dp"
+          android:layout_height="50dp"
+          android:layout_weight="1"
+          android:onClick="speechApiTest"
+          android:singleLine="true"
+          android:text="Speech Api Test"
+          android:textAllCaps="false"
+          android:textSize="12sp"
+          />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        >
+
+      <Button
+          android:layout_width="0dp"
+          android:layout_height="50dp"
+          android:layout_weight="1"
+          android:onClick="faceApiTest"
+          android:text="face Api Test"
+          android:textAllCaps="false"
+          android:textSize="12sp"
+          />
+
+      <Button
+          android:layout_width="0dp"
+          android:layout_height="50dp"
+          android:layout_weight="1"
+          android:onClick="objectDetectApiTest"
+          android:text="object Detect Api Test"
+          android:textAllCaps="false"
+          android:textSize="12sp"
+          />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        >
+
+      <Button
+          android:layout_width="0dp"
+          android:layout_height="50dp"
+          android:layout_weight="1"
+          android:onClick="takePicApiTest"
+          android:text="take Pic Api Test"
+          android:textAllCaps="false"
+          android:textSize="12sp"
+          />
+
+      <Button
+          android:layout_width="0dp"
+          android:layout_height="50dp"
+          android:layout_weight="1"
+          android:onClick="mouthLedApiTest"
+          android:text="mouthLed Api Test"
+          android:textAllCaps="false"
+          android:textSize="12sp"
+          />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        >
+
+      <Button
+          android:layout_width="0dp"
+          android:layout_height="50dp"
+          android:layout_weight="1"
+          android:onClick="sysEventApiTest"
+          android:text="sysEvent Api Test"
+          android:textAllCaps="false"
+          android:textSize="12sp"
+          />
+
+      <Button
+          android:layout_width="0dp"
+          android:layout_height="50dp"
+          android:layout_weight="1"
+          android:onClick="sysApiTest"
+          android:text="sysApi Test"
+          android:textAllCaps="false"
+          android:textSize="12sp"
+          />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        >
+
+      <Button
+          android:layout_width="0dp"
+          android:layout_height="50dp"
+          android:layout_weight="1"
+          android:onClick="standupApiTest"
+          android:text="Robot Gesture Api"
+          android:textAllCaps="false"
+          android:textSize="12sp"
+          />
+
+      <Button
+          android:layout_width="0dp"
+          android:layout_height="50dp"
+          android:layout_weight="1"
+          android:onClick="skillApiTest"
+          android:text="skill Api Test"
+          android:textAllCaps="false"
+          android:textSize="12sp"
+          />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        >
+
+      <Button
+          android:layout_width="0dp"
+          android:layout_height="50dp"
+          android:layout_weight="1"
+          android:onClick="powerApiTest"
+          android:text="power Api Test"
+          android:textAllCaps="false"
+          android:textSize="12sp"
+          />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        >
+
+      <Button
+          android:layout_width="0dp"
+          android:layout_height="50dp"
+          android:layout_weight="1"
+          android:onClick="OnRobotInit"
+          android:text="Robot Init"
+          android:textAllCaps="false"
+          android:textSize="12sp"
+          />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:visibility="gone"
+        >
+
+      <Button
+          android:layout_width="0dp"
+          android:layout_height="50dp"
+          android:layout_weight="1"
+          android:onClick="onStartLanTest"
+          android:text="Start Lan Test"
+          android:textAllCaps="false"
+          android:textSize="12sp"
+          />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        >
+
+      <Button
+          android:layout_width="0dp"
+          android:layout_height="50dp"
+          android:layout_weight="1"
+          android:onClick="phoneCallTest"
+          android:text="Phone Call Test"
+          android:textAllCaps="false"
+          android:textSize="12sp"
+          />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        >
+
+      <Button
+          android:layout_width="0dp"
+          android:layout_height="50dp"
+          android:layout_weight="1"
+          android:onClick="ApkInstallTest"
+          android:text="Apk Installer Test"
+          android:textAllCaps="false"
+          android:textSize="12sp"
+          />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        >
+
+      <Button
+          android:layout_width="0dp"
+          android:layout_height="50dp"
+          android:layout_weight="1"
+          android:onClick="BuiltInSkillTest"
+          android:text="BuiltIn Skills Test"
+          android:textAllCaps="false"
+          android:textSize="12sp"
+          />
+    </LinearLayout>
+  </LinearLayout>
+</ScrollView>

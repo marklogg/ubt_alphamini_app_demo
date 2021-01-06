@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skill name="demo_skill">
+    <call path="/demo/startSkill">
+        <intent-filter category="speech">
+            <utterance sentence="startSkill" />
+        </intent-filter>
+    </call>
+</skill>
+
